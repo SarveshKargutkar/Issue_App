@@ -1,5 +1,6 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles';
+
 import { Typography, Card, CardContent, Button, Grid, FormControl, InputBase } from '@material-ui/core';
 import '../css/app.css';
 import history from '../history'
@@ -75,7 +76,9 @@ class Login extends React.Component {
     if (this.state.username === "sarvesh" && this.state.password === "1234") {
       this.setState({ username: '', password: '' })
       // this.setState({ password: '' })
+
       return history.push('/mainpage')
+
     }
     alert('Error')
   }
@@ -123,7 +126,9 @@ class Login extends React.Component {
                   </FormControl>
                   <br />
                   <Button variant="contained" color="primary" onClick={this.handleSubmit} className={this.props.classes.button} >
-                    LOGIN</Button>
+
+                    Add Todo</Button>
+
                 </form>
               </CardContent>
             </Card>
